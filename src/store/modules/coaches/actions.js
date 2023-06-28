@@ -9,8 +9,9 @@ export default {
       areas: payload.areas,
     };
 
+    const token = context.getters.token;
     const response = await fetch(
-      `https://coach-c4f46-default-rtdb.firebaseio.com/coaches/${userId}.json`,
+      `https://coach-c4f46-default-rtdb.firebaseio.com/coaches/${userId}.json?auth=${token}`,
       {
         method: 'PUT',
         body: JSON.stringify(coachData),
