@@ -31,7 +31,7 @@ export default {
       this.formIsValid = true;
       if (
         this.email === '' ||
-        this.email.includes('@') ||
+        !this.email.includes('@') ||
         this.message === ''
       ) {
         this.formIsValid = false;
